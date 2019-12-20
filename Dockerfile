@@ -1,5 +1,5 @@
-FROM python:3.6.1-alpine
-RUN pip install flask
-CMD ["python","Hello.py"]
-COPY Hello_World.py /Hello.py
+FROM python:3
+ADD Hello.py /
+RUN pip install pystrich
+CMD [ "python", "./Hello.py" ]
 EXPOSE 8080
